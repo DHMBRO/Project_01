@@ -1,6 +1,8 @@
 using UnityEngine;
 
-public interface IInterfaceImplementation
+public interface IImplementation
 {
-   
+    public bool CheckToImplement();
+    public void TryToImplement(bool canImplement);
+
 }

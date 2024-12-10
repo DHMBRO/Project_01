@@ -48,7 +48,7 @@ public class PlayerControler : MonoBehaviour
             return;
         }
 
-        // Implmentation of functions        
+        // Implmentation 
         _playerMovement.TryToImplement();
         _playerCamera.TryToImplement();
     }
