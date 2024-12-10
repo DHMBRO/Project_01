@@ -38,10 +38,11 @@ public class PlayerControler : MonoBehaviour
     void Update()
     {
         // Input         
-        if (Input.GetKeyUp(KeyCode.Mouse1))
+        if (Input.GetKeyUp(KeyCode.Mouse1) || Input.GetKeyUp(KeyCode.Escape))
         {
             SetCursor();
         }
+        
 
         if (cursorLockMode == CursorLockMode.None)
         {
@@ -49,7 +50,7 @@ public class PlayerControler : MonoBehaviour
         }
 
         // Implmentation 
-        _playerMovement.TryToImplement();
+        _playerMovement.TryToImplement(_playerMovement.CheckToImplement());
         _playerCamera.TryToImplement();
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour, IImplementation
 {
     // Speed: meters/second 
 
@@ -23,8 +23,20 @@ public class PlayerMovement : MonoBehaviour
         _selectedSpeed = _speedWalk;    
     }
 
-    public void TryToImplement()
+    public bool CheckToImplement()
     {
+        bool canImplement = true;
+
+        return canImplement;
+    }
+
+    public void TryToImplement(bool canImplement)
+    {
+        if (!canImplement)
+        {
+            return;
+        }
+
         _moveHorizontal = Input.GetAxisRaw("Horizontal");
         _moveVertical = Input.GetAxisRaw("Vertical");
 
